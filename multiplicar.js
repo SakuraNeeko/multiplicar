@@ -3,7 +3,7 @@ function generarTablas() {
     let contenido = "";
     
     for (let i = 1; i <= 10; i++) {
-        contenido += `<div class="fila">3 x ${i} = ${3 * i}</div>`;
+        contenido += `<div class="fila">5 x ${i} = ${5 * i}</div>`;
     }
     
     contenedor.innerHTML = "<h1>PROBANDO</h1>";
