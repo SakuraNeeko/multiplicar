@@ -2,33 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tabla del 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="multiplicar.css">
 </head>
 <body>
 
-    <header>
-        <button onclick="generarTablas()">PROBAR</button>
-    </header>
+    <div class="app-container">
+        <header>
+            <h1>✨ Multiplicador Mágico ✨</h1>
+            <p class="instrucciones">Ingresa el número que desees y descubre su tabla de multiplicar (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
+            
+            <div class="controles">
+                <input type="number" id="numero" placeholder="Ej: 8">
+                <button onclick="generarTablas()">PROBAR</button>
+            </div>
+        </header>
 
-    <main>
-        <div class="tabla">
-            <div class="fila">3 x 1 = 3</div>
-            <div class="fila">3 x 2 = 6</div>
-            <div class="fila">3 x 3 = 9</div>
-            <div class="fila">3 x 4 = 12</div>
-            <div class="fila">3 x 5 = 15</div>
-            <div class="fila">3 x 6 = 18</div>
-            <div class="fila">3 x 7 = 21</div>
-            <div class="fila">3 x 8 = 24</div>
-            <div class="fila">3 x 9 = 27</div>
-            <div class="fila">3 x 10 = 30</div>
-        </div>
-    </main>
+        <main>
+            <div class="tabla" id="contenedor">
+                <div class="mensaje-inicial">Esperando tu número... (づ ◕‿◕ )づ</div>
+            </div>
+        </main>
 
-    <footer>
-        <p>Creado por: Bryan</p>
-    </footer>
-
+        <footer>
+            <p>Creado por: Bryan 🌸</p>
+        </footer>
+    </div>
+    <script src="multiplicar.js"></script>
 </body>
 </html>

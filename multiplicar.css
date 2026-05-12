@@ -1,33 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    font-family: 'Nunito', sans-serif;
+    /* Fondo con degradado pastel suave */
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #475569;
     text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    margin: 20px;
+.app-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #6366f1;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.instrucciones {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px 15px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 120px;
+    text-align: center;
+    transition: border-color 0.3s;
+    font-family: 'Nunito', sans-serif;
+}
+
+input:focus {
+    border-color: #a855f7;
 }
 
 button {
     padding: 10px 20px;
-    background: #22c55e;
+    /* Botón con degradado vibrante pero no agresivo */
+    background: linear-gradient(to right, #a855f7, #ec4899);
     border: none;
+    border-radius: 10px;
     color: white;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Nunito', sans-serif;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
 }
 
 .tabla {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    min-height: 150px;
 }
 
 .fila {
-    background: #1e293b;
-    margin: 5px;
-    padding: 10px;
-    width: 200px;
-    border-radius: 8px;
+    background: white;
+    padding: 12px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-size: 18px;
+    font-weight: bold;
+    color: #334155;
+    border-left: 5px solid #a855f7;
+    /* Animación para que las filas aparezcan suavemente */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.mensaje-inicial {
+    color: #94a3b8;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
